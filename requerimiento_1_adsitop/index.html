@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+</head>
+<body>  
+    <h2>FACTURA ELECTRONICA</h2>
+    <h2>Tienda ropa ADSITOP</h2>
+    <h3>Ni: 000.000.000-0</h3>
+    <div>Cliente: {nombre_cliente}</div>
+    <div>Correo electronico: {correo_electronico}</div>
+    <div>Fecha Factura: {fecha}</div>    
+    <table>
+        <tr>
+            <th>item</th>
+            <th>Producto</th>
+            <th>Cant</th>
+            <th>valor unitario</th>
+            <th>valor</th>
+            <th>IVA 19%</th>
+            <th>Valor Total</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Blusa</td>
+            <td>{cant_blusa}</td>
+            <td>{blusa}</td>
+            <td>{precio_cant_blusa}</td> 
+            <td>{IVA_blusa}</td>
+            <td>{valor_total_blusa}</td>  
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pantalon</td>
+            <td>{cant_pantalon}</td>
+            <td>{pantalon}</td>
+            <td>{precio_cant_pantalon}</td> 
+            <td>{IVA_pantalon}</td>
+            <td>{valor_total_pantalon}</td>     
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Vestido</td>
+            <td>{cant_vestido}</td>
+            <td>{vestido}</td>
+            <td>{precio_cant_vestido}</td> 
+            <td>{IVA_vestido}</td>
+            <td>{valor_total_vestido}</td> 
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>falda</td>
+            <td>{cant_faldas}</td>
+            <td>{falda}</td>
+            <td>{precio_cant_falda}</td> 
+            <td>{IVA_falda}</td>
+            <td>{valor_total_falda}</td> 
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Kimono</td>
+            <td>{cant_kimonos}</td>
+            <td>{kimono}</td>
+            <td>{precio_cant_kimono}</td> 
+            <td>{IVA_kimono}</td>
+            <td>{valor_total_kimono}</td> 
+        </tr>
+    </table>
+    <h4>Total Bruto: {total_bruto}</h4>
+    <h4>IVA 19%: {suma_iva}</h4>
+    <h4>Valor a pagar: {valor_pagar}</h4>
+</body>
+</html>
+
+
