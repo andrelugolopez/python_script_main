@@ -23,7 +23,7 @@ listado_usuarios = []
 preguntar = True
 while preguntar: 
     print("Por favor seleccione una de las siguientes opciones de acuerdo a lo que quiere realizar digitando el numero que corresponde: ")
-    print("1: Registrar usuario \n2: Buscar usuario \n3: Salir")
+    print("1: Registrar usuario \n2: Consultar usuario \n3: Salir")
     opcion = input("Ingrese la opcion: ")
     if opcion == "1":
         informacion["documento"] = input("Ingrese su documento: ")
