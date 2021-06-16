@@ -1,0 +1,230 @@
+/* @charset "utf-8"; */
+
+/* se opganiza la letra con un buen tipo de letra
+con font-size(se da el tamaño que se quiere)
+y para centrarlo es desde (position:absolute; "y de ahi para abajo")*/
+
+/* -------- GLOBAL --------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#principal{
+    border: 5px solid black;
+    width: 100%;
+    margin: auto;
+}
+body{
+    background-color: rgb(240, 61, 61);
+}
+
+h1{
+   font-size: 48px;
+   font-family: Arial;
+   color: black;
+}
+
+p{
+    padding-top: 15px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* ----------------------------- */
+
+header{
+    background-image: url(../images/angel-jimenez.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-color:blue;
+}
+
+h2{
+    margin-left: 100px;
+    padding: 19%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12rem;
+    color: white;
+}
+
+/* ------------ CUADRO 2 ----------------- */
+/* Con esto la imagen que can un buen anchp(width)
+con un buen largo(height) y el background-size(hace que la imagen este coomo uno quiera al porcentaje), con el background-repeat(hacemos que la imagen no se repita varias vaces cuando este en su maximo tamaño) */
+
+article{
+    background-color: white;
+    border: 2px solid white;
+    margin-top: 210px;
+    margin-left: 155px;
+    width: 35%;
+    height: 450px;
+}
+
+#cuadro2{
+    border: 2px solid purple;
+    margin-right: 500px;
+    margin-left: 100px;
+    height: 300px;
+    padding-right: 50px;
+    background-color: white;
+}
+
+#primeraimage{
+    margin-top: 110px;
+    margin-right: 140px;
+    width: 450px;
+    
+}
+
+.music{
+    background: linear-gradient(red, purple);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.der{
+    float: right;
+}
+
+.izq{
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+/* ------------------------------ */
+/* ---------- Cuadro3 ----------- */
+
+.luderDegradado{
+    background: linear-gradient(red, purple);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    margin-bottom: 3px;
+}
+
+section{
+    background-color: white;
+    border: 2px solid white;
+    margin: 170px 50px 200px 15px;
+    width: 43%;
+    height: 150%; 
+}
+
+.der{
+    float: right;
+}
+
+.izq{
+    float: left;
+}
+
+#segundaimage{
+    margin-top: 60px;
+    margin-left: 125px;
+    width: 450px;   
+}
+
+
+/* ------------- Cuarto 4 ---------------- */
+
+aside{
+    background-image: url(../images/john-raptis.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 505px;
+    border: 0.01px solid transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    
+}
+
+
+
+.parrafo4{
+    background-color: transparent;
+    margin-top: 100px;
+    margin-right: 75px;
+    margin-left: 650px;
+    color: white;
+}
+
+.color{
+    color: white;
+}
+
+
+/* -------------- */
+
+article a, section a, aside a{
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 35px 20px 10px 0px;
+    padding: 15px 40px;
+    background-color: rgb(240, 61, 61);
+    border-radius: 50px;
+
+}
+
+a:hover{
+    /* text-decoration: underline;  */
+    font-size: 11.4px;
+    
+}
+
+/*-------------------*/
+
+div{
+    background-color: white;
+}
+
+
+/* --------------------------------- */
+/* ----- Cuadro fnal lista --------- */
+
+nav ul{
+    text-decoration: none;
+    margin-bottom: 50%;
+    margin: 60px 30px;
+    margin-left: 10%;
+}
+
+nav ul li{
+    
+    text-decoration: none;
+    padding: 3px 15px;
+    list-style: none;
+    text-align: left;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+
+/* ------------------- */
+/* ----- Footer ------ */
+footer p{
+    color: white;
+    font-size: 10px; 
+    margin: 10px 120px 30px 120px;
+    
+}
+
+hr{
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}

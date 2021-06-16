@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <form class="registration-form form-width" method="POST" action="/login">
+      <div>
+        <section class="input-section flex-column">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input id="email" id="input-email" type="email" name="email" placeholder="Ingrese email"/>
+          </div>
+          <div class="input-group">
+            <label for="password">Contraseña</label>
+            <input id="password" id="input-contraseña" type="password" name="password" placeholder="Contraseña"/>
+          </div>
+        </section>
+        <section class="submit-section">
+          <input id="button-login" type="submit" value="Iniciar Sesión" />
+          <p>ó</p>
+          <a href="{{url_for('interfaz_registro')}}">Registrarse</a>
+        </section>
+      </div>
+    </form>
+  </body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/workspace.css" />
+    <link rel="stylesheet" href="/static/css/tarjeta-lista.css">
+    <link rel="stylesheet" href="/static/css/navegacion.css">
+    <title>Workspace</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <img class="logo" src="/static/assets/app_finanzas_icon.png" alt="logo" />
+      <section class="user-section">
+        <a class="btn" href="{{url_for('interfaz_configuracion')}}">Configuración</a>
+      </section>
+      <!--<section class="default-section">-->
+        <!--<a class="login-button" href="">Iniciar sesión</a><a class="register-button" href="">Registrarse</a>-->
+      <!--</section>-->
+      <!-- Aquí va el botón de menú -->
+    </nav>
+    <div class="main-container">
+      <section class="seccion-crear-editar-saldo">
+        <div class="button-one">
+          <a href="{{url_for('interfaz_editar_lista')}}">
+            <input type="submit" value="Crear" />
+          </a>
+        </div>
+        <h1>$1'200.000</h1>
+        <div class="button-two">
+          <a href="{{url_for('interfaz_editar_saldo')}}">
+            <input type="submit" value="Editar saldo" />
+          </a>
+        </div>
+      </section>
+      <main class="main-section">
+        <div class="contenedor-tarjetas">
+          <section class="list">
+            <div class="title">
+              {% for elemento in informacion_tarjeta %}
+                <h1>{{elemento.servicios}}</h1>
+              {% endfor %}
+            <div>
+                <img src="/static/assets/options-icon.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="text-values-container">
+              <div class="main-text">
+                <p>Electricidad</p>
+                <p>Agua</p>
+                <p>Arriendo</p>
+              </div>
+
+              <div class="main-values">
+                <p>$50.000</p>
+                <p>$80.000</p>
+                <p>$450.000</p>
+              </div>
+            </div>
+
+            <div class="total">
+              <p>Total</p>
+              <div class="value">
+                <p>580.000</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="contenedor-saldo">
+          <div class="aside-ingresos-costos">
+            <div class="display-saldo">
+              <p>Ingresos:</p>
+              <p>+$50.000</p>
+            </div>
+            <div class="display-saldo">
+              <p>Costos:</p>
+              <p>-$1'100.000</p>
+            </div>
+          </div>
+          <section class="saldo-section">
+            <p>Saldo:</p>
+            <h1>$150.000</h1>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

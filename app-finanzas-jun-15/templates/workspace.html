@@ -1,0 +1,75 @@
+{% extends 'navegacion.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/workspace.css" />
+    <link rel="stylesheet" href="/static/css/tarjeta-lista.css">
+    <link rel="stylesheet" href="/static/css/navegacion.css">
+{% endblock %}
+
+{% block title %}Workspace{% endblock %}
+
+{% block content %}
+    <div class="main-container">
+      <section class="seccion-crear-editar-saldo">
+        <div class="button-one">
+          <a href="{{url_for('interfaz_editar_lista')}}">
+            <button class="espaciado">Crear</button>
+          </a>
+        </div>
+        <h1>$1'200.000</h1>
+        <div class="button-two">
+          <a href="{{url_for('interfaz_editar_saldo')}}">
+            <button class="espaciado">Editar Saldo</button>
+          </a>
+        </div>
+      </section>
+      <main class="main-section">
+        <div class="contenedor-tarjetas">
+        {% for elemento in tarjetas %}
+          <section class="list">
+            <div class="title">
+              <h1>{{elemento}}</h1>
+              <div>
+                <img src="/static/assets/options-icon.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="text-values-container">
+            {% for llave_dato in tarjetas.get(elemento) %}
+              <section class="value-group">
+                <p>{{llave_dato}}</p>
+                <p>{{tarjetas.get(elemento).get(llave_dato)}}</p>
+              </section>
+            {% endfor %}
+            </div>
+            
+            <div class="total">
+              <p>Total</p>
+              <div class="value">
+                <p>580.000</p>
+              </div>
+            </div>
+          </section>
+        {% endfor %}
+        </div>
+        <div class="contenedor-saldo">
+          <div class="aside-ingresos-costos">
+            <div class="display-saldo">
+              <p>Ingresos:</p>
+              <p>+$50.000</p>
+            </div>
+            <div class="display-saldo">
+              <p>Costos:</p>
+              <p>-$1'100.000</p>
+            </div>
+          </div>
+          <section class="saldo-section">
+            <p>Saldo:</p>
+            <h1>$150.000</h1>
+          </section>
+        </div>
+      </main>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "diseño.html" %}
+{% block content %}
+    {% for diccionario in elegir_periferico %}
+        <h3>PERIFERICO: {{diccionario.id}}</h3>
+        <h3>COMPRAR</h3>
+        <P>NOMBRE: {{diccionario.NOMBRE}}</P>
+        <P>PRECIO: {{diccionario.PRECIO}}</P>
+        <P>STOCK: {{diccionario.STOCK}}</P>
+    {% endfor %}
+{% endblock %}

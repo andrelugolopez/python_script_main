@@ -1,0 +1,14 @@
+{% extends "diseño.html" %}
+{% block content %}
+    <main>
+        <form action="/welcome" method="POST">
+            <label for="email">EMAIL</label><br>
+            <input id="email" type="text" name="email"><br>
+            <label for="password">PASSWORD</label><br>
+            <input id="password" type="password" name="password"><br>
+            <label for="nombre">NOMBRE</label><br>
+            <input id="nombre" type="text" name="nombre"><br>
+            <input type="submit" value="REGISTRARSE">
+        </form>
+    </main>
+{% endblock %}

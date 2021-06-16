@@ -96,7 +96,7 @@ for value in diccionario_usuarios.values():
 print("-------objetos permitidos como llaves----------")
 #llaves: mutabilidad, inmutabilidad
 #SI INTENTAMOS PASAR COMO LLAVE DE UN DICCIONARIO UN OBJETO MUTABLE
-#PYTHON NO NOS DEJARA
+#PYTHON NO NOS DEJARAejemplo interpolacion python plantilla
 #lista_llave = [1, 2]
 #diccionario_1 = {"nombre": "Raul Perez", lista_llave: "Maria Perez"}
 

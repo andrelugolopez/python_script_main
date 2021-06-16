@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/navegacion.css" />
+{% endblock %}
+
+{% block title%}App Finanzas{% endblock %}
+
+{% block header %}
+    <nav class="nav-bar">
+      <a class="link-logo" href="/">
+        <img class="logo" src="{{url_for('static',filename='assets/app_finanzas_icon.png')}}" alt="logo" />
+      </a>
+      {% if usuario %}
+      <h3>Bienvenido {{usuario}}</h3>
+      <section class="user-section">
+        <a class="btn" href="{{url_for('interfaz_configuracion')}}">Configuración</a>
+        <a class="btn" href="{{url_for('cerrar_sesion')}}">Cerrar sesión</a>
+      </section>
+      {% else %}
+      <section class="default-section">
+        <a class="login-button" href="{{url_for('interfaz_login')}}">Iniciar sesión</a><a class="register-button" href="{{url_for('interfaz_registro')}}">Registrarse</a>
+      </section>
+      {% endif %}
+    </nav>
+{% endblock %}
+

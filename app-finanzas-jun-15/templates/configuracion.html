@@ -1,0 +1,47 @@
+{% extends 'navegacion.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/configuracion.css">
+    <link rel="stylesheet" href="/static/css/navegacion.css">
+{% endblock %}
+
+{% block title %}Configuración{% endblock %}
+
+{% block content  %}
+    <form>
+
+        <div class="setting-container">
+            <h1>Configuración</h1>
+            
+            <div class="input-and-label">
+                <div class="">
+                    <label for="e-mail">Email</label>
+                    <input id="input-email" type="email" name="e-mail" placeholder="Email Address">
+                </div>
+                <div>
+                    <label for="nombres">Nombres</label>
+                    <input id="input-nombres" type="text" name="nombres" placeholder="nombre">
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos</label>
+                    <input id="input-apellidos" type="text" name="apellidos" placeholder="apellidos">
+                </div>
+                <div>
+                    <label for="telefono">Telefono</label>
+                    <input id="input-telefono" type="number" name="telefono" placeholder="telefono">
+                </div>
+            </div>
+            <div class="buttons">
+                <a class="btn" href="{{url_for('interfaz_workspace')}}">Cerrar sin Guardar</a>
+                <a class="btn save-button" href="{{url_for('interfaz_workspace')}}">Guardar Cambios</a>
+            </div>
+        </div>
+
+        <div class="photo-user-section">
+            <img class="user-photo" src="/static/assets/app_finanzas_icon.png" alt="foto usuario">
+            <button>Subir una imagen</button>
+        </div>
+
+    </form>
+{% endblock %}

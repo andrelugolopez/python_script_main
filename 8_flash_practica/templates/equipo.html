@@ -1,0 +1,6 @@
+{% extends "diseño.html" %}
+{% block content %}
+    {% for diccionario in elegir_equipo %}
+        <p>{{diccionario.clase_equipo}}: RAM {{diccionario.RAM}} PRECIO: {{diccionario.PRECIO}}</p>
+    {% endfor %}
+{% endblock %}

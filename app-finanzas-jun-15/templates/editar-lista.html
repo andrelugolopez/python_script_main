@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/editar-lista.css" />
+{% endblock %}
+
+{% block title %}App Finanzas{% endblock %}
+
+{% block content %}
+    <div class="backdrop">
+      <div class="modal-editar-saldo">
+        <div class="editar-saldo-container">
+          <h1>Editar Lista</h1>
+          <div>
+            <form class="editar-saldo-form" action="">
+              <section class="editar-saldo-input-group">
+                <label for="saldo">Titulo:</label>
+                <input type="text" name="saldo" id="input-saldo" min="0" />
+              </section>
+                <section class="items-section">
+                    <div class="labels">
+                      <p>Items</p>
+                      <p>Tipo</p>
+                      <p>Costos</p>
+                    </div>
+                    <div class="items-container">
+                      <div class="list-item">
+                        <input class="item-name" type="text">
+                        <select class="item-type" name="">
+                          <option>Ingreso</option>
+                          <option>Costo</option>
+                        </select>
+                        <input class="item-cost" type="number" min="0">
+                        <button class="item-remove">
+                          <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+                        </button>
+                      </div>
+                </section>
+                <button class="add-item-button-container">
+                    <img src="/static/assets/plus-icon.svg" alt="">
+                    <p>Añadir Item</p>
+                </button>
+              <section class="editar-saldo-button-group">
+                <a class="btn" href="{{url_for('interfaz_workspace')}}">Cancelar</a>
+                <a class="btn save-button" href="{{url_for('interfaz_workspace')}}">Guardar</a>
+              </section>
+            </form>
+          </div>
+          <a href="{{url_for('interfaz_workspace')}}">
+            <button class="close-button">
+              <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+{% endblock %}

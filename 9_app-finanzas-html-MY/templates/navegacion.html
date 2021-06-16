@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/navegacion.css" />
+    <title>App Finanzas</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <img class="logo" src="{{url_for('static',filename='assets/app_finanzas_icon.png')}}" alt="logo" />
+      <section class="user-section">
+        <!--<button>Configuración</button>-->
+      </section>
+      <section class="default-section">
+        <a class="login-button" href="{{url_for('interfaz_login')}}">Iniciar sesión</a><a class="register-button" href="{{url_for('interfaz_registro')}}">Registrarse</a>
+      </section>
+      <!-- Aquí va el botón de menú -->
+    </nav>
+  </body>
+</html>
