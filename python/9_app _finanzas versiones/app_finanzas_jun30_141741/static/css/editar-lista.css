@@ -1,0 +1,164 @@
+.modal-editar-saldo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.backdrop {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgb(19, 21, 22);
+}
+
+.editar-saldo-container {
+		box-sizing: border-box;
+    background-color: #212529;
+    color: white;
+    position: relative;
+    padding: 2.5em;
+    border-radius: 1.5em;
+    width: clamp(15em, 65%, 120em);
+		max-height: 80em;
+}
+
+.editar-saldo-container > h1 {
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+.editar-saldo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.editar-saldo-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.editar-saldo-button-group {
+    display: flex;
+    justify-content: right;
+    gap: 1.5em;
+}
+
+.close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.75em;
+    width: 2.75em;
+    height: 2.75em;
+    border-radius: 50%;
+    background: #212529;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.close-button:active {
+    background: #131618;
+}
+
+input[type=submit].preferred,
+button.preferred {
+    background-color: #838383;
+    color: white;
+    border-color: #333;
+}
+
+input[type=submit].preferred:active,
+button.preferred:active {
+    background-color: #666;
+}
+
+.add-item-button-container {
+  position: relative;
+  display: flex;
+	align-items: center;
+  width: 100%;
+}
+
+.add-item-button-container > img {
+  position: absolute;
+}
+
+.add-item-button-container > p {
+  margin: 0 auto;
+}
+
+.list-item {
+	display: flex;
+	border-width: 2px;
+	border-color: black;
+	gap: 20px;
+}
+
+input[type=text] {
+	width: 100%;
+}
+
+.list-item .item-remove {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	background-color: white;
+	border:none;
+	border-radius: 50%;
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.list-item .item-remove:active {
+	background-color: #ddd;
+	transform: translateY(2px);
+}
+
+.list-item .item-remove:hover{
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
+}
+
+.list-item > * {
+	width: 100%;
+}
+
+.items-container {
+	height: 15em;
+	overflow: auto;
+	padding: 1em;
+	border: 2px solid #888;
+	border-radius: 1em;
+}
+
+.items-container > * + * {
+	margin-top: 1em;
+}
+
+.items-section > p {
+	width: 100%;
+}
+
+.items-section > * + * {
+	margin-top: 1em;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+	padding-left: 1em;
+	padding-right: 31.5%;
+}
+
+.save-button {
+  /*background-color: #838383;*/
+  color: white;
+}

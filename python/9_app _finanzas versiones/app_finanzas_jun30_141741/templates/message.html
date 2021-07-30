@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/message.css" />
+    <link rel="stylesheet" href="/static/css/bg.css" media="all">
+{% endblock %}
+
+{% block title %}Mensaje{% endblock %}
+
+{% block content %}
+<div class="background-body">
+    <header class="header">
+        <section class="header-section-one"></section>
+        <section class="header-section-two"></section>
+        <section class="header-section-three"></section>
+    </header>
+    <main>
+        <div class="border-gradient-item"></div>
+        <div class="first-section"></div>
+        <div class="second-section"></div>
+    </main>
+</div>
+    <main class="message-container">
+      <section class="message-header">
+        <h1>
+          {{title}}
+        </h1>
+      </section>
+      <section class="message-content">
+        <p>
+          {{content}}
+        </p>
+      </section>
+      <section class="message-footer">
+        {% if ok_url %}
+        <a href="{{ok_url}}"><button>Entendido</button></a>
+        {% endif %}
+        <a href="/"><button>Volver al inicio</button></a>
+      </section>
+    </main>
+{% endblock %}

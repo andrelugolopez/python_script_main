@@ -1,0 +1,133 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #c4c4c4;
+  display: flex;
+  flex-direction:column;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  font-size: 1em;
+  border-color: #aaa;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  padding: 0.2em;
+}
+
+input {
+  background-color: #212529;
+  border-radius: 0.4em;
+}
+
+input:focus {
+  background-color: #2e3238;
+}
+
+input[type="text"] {
+  width: 20em;
+}
+
+.input-group input {
+  width: 20em;
+  padding: 7px;
+}
+
+.btn,
+input[type="submit"],
+button {
+  font-size: 1em;
+  border: none;
+  border-radius: 0.6em;
+  padding: 0.5em 0.75em;
+  background-color: #24517A;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:active,
+input[type="submit"]:active,
+button:active {
+  background: #193753;
+}
+
+#button-login,
+#button-registro {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.registration-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212529;
+  /*border: 2px solid black;*/
+  border-radius: 10px;
+  margin: auto;
+  padding: 2em 8em;
+}
+
+.registration-form * {
+  color: white;
+}
+
+.form-width {
+  width: 45em;
+}
+
+.registration-form > div > * + * {
+  margin-top: 3em;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.input-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.submit-section {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group > * + * {
+  margin-top: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.profit {
+  color: rgb(100, 233, 67);
+}
+
+.loss {
+  color: rgb(241, 42, 42);
+}

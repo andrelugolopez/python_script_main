@@ -1,0 +1,81 @@
+.modal-editar-saldo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.backdrop {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.editar-saldo-container {
+    background-color: white;
+    position: relative;
+    padding: 2.5em;
+    border-radius: 1.5em;
+    width: clamp(15em, 50%, 30em);
+}
+
+.editar-saldo-container > h1 {
+    margin: 0;
+    margin-bottom: 3rem;
+}
+
+.editar-saldo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.editar-saldo-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.editar-saldo-button-group {
+    display: flex;
+    justify-content: right;
+    gap: 1.5em;
+}
+
+.close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.75em;
+    width: 2.75em;
+    height: 2.75em;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+input[type=submit].preferred,
+button.preferred {
+    background-color: #838383;
+    color: white;
+    border-color: #333;
+}
+
+input[type=submit].preferred:active,
+button.preferred:active {
+    background-color: #666;
+}
+
+
+.save-button {
+    background-color: #838383;
+    color: white;
+}

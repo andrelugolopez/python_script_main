@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/editar-saldo.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+      .checkbox-input-section {
+        display:flex;
+      }
+    </style>
+{% endblock %}
+
+{% block title %}App Finanzas{% endblock %}
+
+{% block content %}
+<div class="backdrop">
+  <div class="modal-editar-saldo">
+    <div class="editar-saldo-container">
+      <h1>Editar Saldo</h1>
+      <div>
+        <form class="editar-saldo-form" method="POST" action="{{url_for('editar_saldo')}}">
+          <section class="editar-saldo-input-group">
+            <label for="saldo">Ingresa tu nuevo saldo:</label>
+            <input type="number" name="saldo" id="input-saldo" min="0" required/>
+            <section class="checkbox-input-section">
+              <input id="check" type="checkbox" name="saldo-actual">
+              <label for="check">Agregar al saldo actual</label>
+            </section>
+          </section>
+          <section class="editar-saldo-button-group">
+            <a class="btn" href="{{url_for('interfaz_workspace')}}">Cancelar</a>
+            <input type="submit" value="Guardar">
+          </section>
+        </form>
+      </div>
+      <a href="{{url_for('interfaz_workspace')}}">
+        <button class="close-button">
+          <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

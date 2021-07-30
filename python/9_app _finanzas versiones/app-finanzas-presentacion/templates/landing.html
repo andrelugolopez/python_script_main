@@ -1,0 +1,81 @@
+{% extends 'navegacion.html' %}
+
+{% block style %}
+{{ super() }}
+
+<style>
+
+body {
+    height: auto;
+    background-color: #282828;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 580px;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+.image-container {
+    border: 2px solid white;
+    width: 50%;
+    height: 300px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    gap: 100px
+}
+
+div {
+    border: 2px solid white;
+    width: 330px;
+    height: 200px;
+    /* margin-top: 20px; */
+    position: relative;
+    left: 100%;
+    right: 0;
+    top: 550px;
+    background-color: white;
+    border-radius: 10px;
+    /* display: flex;*/
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.content p {
+    color: white;
+}
+    
+</style> 
+
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="hero">
+        <h1>Bienvenidos a App Finanzas</h1>
+        <img src="{{url_for('static', filename='assets/app_finanzas_icon.png')}}" alt="App logo">
+    </section>
+    <section class="content">
+            <h1>Tus finanzas en un solo lugar</h1>
+            <p>El mejor gestor financiero al alcance de tu mano. ¿Qué esperas? empieza hoy.<p>
+    </section>
+</main>
+
+{% endblock %}

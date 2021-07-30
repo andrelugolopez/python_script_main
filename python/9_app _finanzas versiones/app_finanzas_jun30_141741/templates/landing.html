@@ -1,0 +1,97 @@
+{% extends 'navegacion.html' %}
+
+{% block style %}
+{{ super() }}
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/bg.css')}}" media="all">
+<style>
+
+body {
+    height: auto;
+    background-color: #282828;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 580px;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+.image-container {
+    border: 2px solid white;
+    width: 50%;
+    height: 300px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    line-height: 2em;
+}
+
+.content p {
+    color: white;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3em;
+}
+
+</style> 
+
+{% endblock %}
+
+{% block content %}
+<div class="background-body">
+    <header class="header">
+        <section class="header-section-one animation"></section>
+        <section class="header-section-two animation delay"></section>
+        <section class="header-section-three animation"></section>
+    </header>
+    
+    <main>
+        <div class="border-gradient-item animation"></div>
+        <div class="first-section animation"></div>
+        <div class="second-section animation delay"></div>
+    </main>
+</div>
+<main>
+    <section class="hero">
+        <h1>Bienvenidos a App Finanzas</h1>
+        <img src="{{url_for('static', filename='assets/app_finanzas_icon.png')}}" alt="App logo">
+    </section>
+    <section class="content">
+            <h1>Tus finanzas en un solo lugar</h1>
+            <p>El mejor gestor financiero al alcance de tu mano.<p>
+            <p>¿Qué esperas? Empieza hoy.</p>
+    </section>
+</main>
+<footer>
+    <p>Desarrollado por Novameraki ✨ - Todos los derechos reservados &copy; 2021</p>
+</footer>
+
+{% endblock %}

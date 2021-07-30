@@ -1,0 +1,108 @@
+.background-body,
+.background-body * {
+    margin: 0;
+    background-color: #27303c;
+}
+
+.background-body {
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.background-body header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.background-body main {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.background-body .header-section-one {
+    border: none;
+    width: 500px;
+    height: 500px;
+    border-radius: 0 0 100% 0;
+    background: rgb(43,53,67);
+    background: linear-gradient(146deg, rgba(43,53,67,1) 42%, rgba(32,34,37,1) 90%);
+}
+
+.background-body .header-section-three {
+    border: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 0 0 0 100%;
+    background: rgb(43,53,67);
+    background: linear-gradient(150deg, rgba(43,53,67,1) 42%, rgba(32,34,37,1) 90%);
+}
+
+.background-body .header-section-two {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: rgb(43,53,67);
+    background: linear-gradient(150deg, rgba(43,53,67,1) 42%, rgba(32,34,37,1) 90%);
+    position: relative;
+    right: 100px;
+    top: 235px;
+    /*background-color: red;*/
+}
+
+.background-body .first-section {
+    border: none;
+    width: 140px;
+    height: 140px;
+    border-radius: 155px;
+    background: rgb(43,53,67);
+    background: linear-gradient(146deg, rgba(43,53,67,1) 42%, rgba(32,34,37,1) 90%);
+    position: relative;
+    left: 95px;
+    top: 0;
+}
+
+.background-body .second-section {
+    border: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 155px;
+    background: rgb(43,53,67);
+    background: linear-gradient(146deg, rgba(43,53,67,1) 42%, rgba(32,34,37,1) 90%);
+    position: relative;
+    left: 25em;
+    top: -13em;
+}
+
+.animation {
+    animation-name: wave-vertical;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+.delay {
+    animation-delay: -5s;
+}
+
+@keyframes wave-vertical{
+    0% {
+        transform: translateY(2em);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(2em);
+    }
+}

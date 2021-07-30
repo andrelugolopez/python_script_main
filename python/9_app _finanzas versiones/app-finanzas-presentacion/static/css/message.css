@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  width: min(45em, 80%);
+  height: 20em;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: auto;
+  padding: 6em 8em;
+}
+
+.message-container .message-header {
+  font-size: 1.5em;
+}
+
+.message-container .message-content {
+  flex-grow: 1;
+  margin-top: 1em;
+}

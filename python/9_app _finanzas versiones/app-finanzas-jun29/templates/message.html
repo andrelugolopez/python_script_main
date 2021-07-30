@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/message.css" />
+{% endblock %}
+
+{% block title %}Mensaje{% endblock %}
+
+{% block content %}
+    <main class="message-container">
+      <section class="message-header">
+        <h1>
+          {{title}}
+        </h1>
+      </section>
+      <section class="message-content">
+        <p>
+          {{content}}
+        </p>
+      </section>
+      <section class="message-footer">
+        {% if ok_url %}
+        <a href="{{ok_url}}"><button>Entendido</button></a>
+        {% endif %}
+        <a href="/"><button>Volver al inicio</button></a>
+      </section>
+    </main>
+{% endblock %}

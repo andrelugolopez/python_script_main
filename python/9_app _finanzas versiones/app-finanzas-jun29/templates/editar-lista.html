@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/font.css" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/editar-lista.css" />
+{% endblock %}
+
+{% block title %}App Finanzas{% endblock %}
+
+{% block content %}
+    <div class="backdrop">
+      <div class="modal-editar-saldo">
+        <div class="editar-saldo-container">
+          <h1>Editar Lista</h1>
+          <div>
+            <form class="editar-saldo-form" action="{{url_for('post_registrar_tarjetas')}}" method="POST">
+              <section class="editar-saldo-input-group">
+                <label for="saldo">Titulo:</label>
+                <input type="text" name="titulo-categoria" id="input-saldo" min="0" value="{{titulo}}"/>
+              </section>
+              <small>* Las tarjetas se limitan a 4 valores cada una</small>
+                <section class="items-section">
+                    <div class="labels">
+                      <p>Items</p>
+                      <!-- <p>Tipo</p> -->
+                      <p>Costos</p>
+                    </div>
+                    <div class="items-container">
+                      <div class="list-item">
+                        <input class="item-name" type="text" name="item-name-1" value="{{items[0]}}">
+                        <!-- <select class="item-type" name="">
+                          <option>Ingreso</option>
+                          <option>Costo</option>
+                        </select> -->
+                        <input class="item-cost" type="number" min="0" name="item-cost-1" value="{{costos[0]}}">
+                        <!-- <a class="item-remove">
+                          <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+                        </a> -->
+                      </div>
+                      <div class="list-item">
+                        <input class="item-name" type="text" name="item-name-2" value="{{items[1]}}">
+                        <!-- <select class="item-type" name="">
+                          <option>Ingreso</option>
+                          <option>Costo</option>
+                        </select> -->
+                        <input class="item-cost" type="number" min="0" name="item-cost-2" value="{{costos[1]}}">
+                        <!-- <a class="item-remove">
+                          <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+                        </a> -->
+                      </div>
+                      <div class="list-item">
+                        <input class="item-name" type="text" name="item-name-3" value="{{items[2]}}">
+                        <!-- <select class="item-type" name="">
+                          <option>Ingreso</option>
+                          <option>Costo</option>
+                        </select> -->
+                        <input class="item-cost" type="number" min="0" name="item-cost-3" value="{{costos[2]}}">
+                        <!-- <a class="item-remove">
+                          <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+                        </a> -->
+                      </div>
+                      <div class="list-item">
+                        <input class="item-name" type="text" name="item-name-4" value="{{items[3]}}">
+                        <!-- <select class="item-type" name="">
+                          <option>Ingreso</option>
+                          <option>Costo</option>
+                        </select> -->
+                        <input class="item-cost" type="number" min="0" name="item-cost-4" value="{{costos[3]}}">
+                        <!-- <a class="item-remove">
+                          <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+                        </a> -->
+                      </div>
+                </section>
+                <!-- <button class="add-item-button-container">
+                    <img src="/static/assets/plus-icon.svg" alt="">
+                    <p>Añadir Item</p>
+                </button> -->
+              <section class="editar-saldo-button-group">
+                <a class="btn" href="{{url_for('ruta_eliminar_lista', id=id_categoria)}}">Eliminar esta tarjeta</a>
+                <a class="btn" href="{{url_for('interfaz_workspace')}}">Cancelar</a>
+                <input type="submit" class="save-button preferred" value="Guardar">
+              </section>
+            </form>
+          </div>
+          <a href="{{url_for('interfaz_workspace')}}">
+            <button class="close-button">
+              <img src="/static/assets/cross-icon.svg" alt="" srcset="">
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+{% endblock %}
